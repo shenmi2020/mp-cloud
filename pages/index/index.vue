@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import request from '../../utils/request.js'
 	export default {
 		data() {
 			return {
@@ -15,16 +16,23 @@
 			}
 		},
 		onLoad() {
-      uniCloud.callFunction({
-        name: 'router',
-        data: {
-          action: 'hello/sayHello',
-          data: {}
-        }
-      })
-      .then(res => {
-        // this.title = res.data
-        console.log('koa:', res.result.data)
+      // uniCloud.callFunction({
+      //   name: 'router',
+      //   data: {
+      //     action: 'hello/sayHello',
+      //     data: {}
+      //   }
+      // })
+      // .then(res => {
+      //   // this.title = res.data
+      //   console.log('koa:', res.result.data)
+      // })
+      const data = {
+        action: 'hello/sayHello',
+        data: {}
+      }
+      request('router', data).then(res => {
+        console.log('res:', res)
       })
 		},
 		methods: {
