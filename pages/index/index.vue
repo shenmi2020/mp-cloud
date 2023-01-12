@@ -32,7 +32,7 @@
         data: {}
       }
       request('router', data).then(res => {
-        console.log('res:', res)
+        console.log('res333:', res)
       })
 		},
 		methods: {
