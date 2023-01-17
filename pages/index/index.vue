@@ -1,8 +1,14 @@
 <template>
 	<view class="content">
+    <view class="date-content">
+      <view>2°</view>
+      <view>2023-01-12</view>
+      <view>烟台</view>
+      <view>空气质量:良</view>
+    </view>
 		<!-- <image class="logo" src="/static/logo.png"></image> -->
 		<view class="text-area">
-			<text class="title">{{title}}</text>
+			<!-- <text class="title">{{title}}</text> -->
 		</view>
 	</view>
 </template>
@@ -16,17 +22,6 @@
 			}
 		},
 		onLoad() {
-      // uniCloud.callFunction({
-      //   name: 'router',
-      //   data: {
-      //     action: 'hello/sayHello',
-      //     data: {}
-      //   }
-      // })
-      // .then(res => {
-      //   // this.title = res.data
-      //   console.log('koa:', res.result.data)
-      // })
       const data = {
         action: 'hello/sayHello',
         data: {}
@@ -41,14 +36,16 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 	}
-
+  .date-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+  }
 	.logo {
 		height: 200rpx;
 		width: 200rpx;
