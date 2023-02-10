@@ -5,8 +5,30 @@
 			"style": {
 				"navigationBarTitleText": "每日打卡"
 			}
-		}
-	],
+		},
+    {
+      "path": "pages/my/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "red",
+    "selectedColor": "blue",
+    "backgroundColor": "green",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "打卡"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的"
+      }
+    ]
+  },
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

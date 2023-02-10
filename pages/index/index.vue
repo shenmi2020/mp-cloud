@@ -51,27 +51,37 @@
 	</view>
 </template>
 
-<script>
-  import request from '../../utils/request.js'
-	export default {
-		data() {
-			return {
-				title: 'Hello11122'
-			}
-		},
-		onLoad() {
-      const data = {
-        action: 'hello/sayHello',
-        data: {}
-      }
-      request('router', data).then(res => {
-        console.log('res333:', res)
-      })
-		},
-		methods: {
+<script setup>
+import request from '../../utils/request.js'
+import { onLoad } from '@dcloudio/uni-app'
+// import { onMount } from 'vue'
+// export default {
+//   data() {
+//     return {
+//       title: 'Hello11122'
+//     }
+//   },
+//   onLoad() {
+//     const data = {
+//       action: 'hello/sayHello',
+//       data: {}
+//     }
+//     request('router', data).then(res => {
+//       console.log('res333:', res)
+//     })
+//   },
+//   methods: {
 
-		}
-	}
+//   }
+// }
+
+onLoad(()=>{
+  console.log('onload:')
+})
+console.log('on:')
+// onMount(() => {
+//   console.log('onMount:')
+// })
 </script>
 
 <style lang="scss">
