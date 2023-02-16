@@ -28,7 +28,7 @@
           <image class="logo" src="/static/logo.png" />
         </view>
         <view class="plan-item-title">
-          学英语
+          学英语11
         </view>
         <view class="plan-item-time">
           19:00 - 21:00
