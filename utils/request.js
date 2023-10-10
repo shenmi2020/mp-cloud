@@ -1,4 +1,4 @@
-const request = (name = '', data = {}) => {
+const request = (data = {}, name = '') => {
   return new Promise((resolve, reject) => {
     uni.showLoading()
     uniCloud.callFunction({

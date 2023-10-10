@@ -77,6 +77,13 @@ import { onLoad } from '@dcloudio/uni-app'
 
 onLoad(()=>{
   console.log('onload:')
+  const data = {
+    action: 'hello/sayHello',
+    data: {}
+  }
+  request('router', data).then(res => {
+    console.log('res333:', res)
+  })
 })
 console.log('on:')
 // onMount(() => {
