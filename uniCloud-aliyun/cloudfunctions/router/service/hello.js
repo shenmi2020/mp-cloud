@@ -1,6 +1,6 @@
 const { Service } = require("uni-cloud-router");
 module.exports = class HelloService extends Service {
-  sayHello() {
+  async sayHello() {
     let n = 200;
     let arr = [];
     let tmp1 = 1; 
@@ -17,8 +17,14 @@ module.exports = class HelloService extends Service {
       }
       
     }
+    const db = uniCloud.database();
+    // 获取 `user` 集合的引用
+    const collection = db.collection('posts');
+    let res = await collection.add({
+      content: 'Ben'
+    })
     return {
-      data: "welcome to king:" + arr,
+      data: "welcome to king:" + res,
     };
   }
 };

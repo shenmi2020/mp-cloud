@@ -1,4 +1,4 @@
-const request = (data = {}, name = '') => {
+const request = (data = {}, name = 'router') => {
   return new Promise((resolve, reject) => {
     uni.showLoading()
     uniCloud.callFunction({
